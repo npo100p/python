@@ -1,0 +1,18 @@
+# Задача 16: Требуется вычислить, сколько раз встречается некоторое число X в массиве A[N]. 
+# Пользователь в первой строке вводит натуральное число N – количество элементов в массиве. 
+# В последующих  строках записаны N целых чисел Ai. Последняя строка содержит число X 
+Ввод: 5
+Ввод: 3 2 3 7 5
+Ввод: 3
+-> 2
+
+nSize = int(input("Size of massive: "))
+aIndex = 0
+mass=[]
+while nSize > aIndex : 
+    iNumb = int(input("Insert number of massive: "))
+    mass.insert(aIndex,iNumb)
+    aIndex+=1
+print(mass)
+bCount = int(input("Count numbers: "))
+print(mass.count(bCount))
