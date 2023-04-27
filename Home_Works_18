@@ -1,0 +1,24 @@
+# Задача 18: Требуется найти в массиве A[N] самый близкий по величине элемент к заданному числу X. 
+# Пользователь в первой строке вводит натуральное число N – количество элементов в массиве. 
+# В последующих  строках записаны N целых чисел Ai. Последняя строка содержит число X 
+# Ввод: 5
+# Ввод: 1 2 6 4 9
+# Ввод: 8
+# -> 9 
+nSize = abs(int(input("Insert size of array: ")))
+aIndex = 0
+mass = []
+while nSize > aIndex : 
+    iNumb = int(input(f'Insert number of array with index {aIndex}: '))
+    mass.insert(aIndex,iNumb)
+    aIndex+=1
+print(mass)
+zIP = int(input("Insert number X, with which to compare the elements of the list: "))
+min = abs(zIP - mass[0])
+index = 0
+for i in range(1, nSize):
+    count = abs(zIP - mass[i])
+    if count < min:
+        min = count
+        index = i
+print(f'Number {mass[index]} in list  closest in size to the number {zIP}')
